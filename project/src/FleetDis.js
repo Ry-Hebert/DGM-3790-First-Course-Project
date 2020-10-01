@@ -19,6 +19,12 @@ import axios from 'axios'
 //     }
 // }
 
+const shipAPI = axios.create({
+    baseURL: 'https://api.fleetyards.net/v1/ships'
+})
+
+
+
 let fleetDis = () => {
     
     shipDisplayToggle1 = () =>{
