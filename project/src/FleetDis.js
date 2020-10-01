@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FleetGrab from './FleetGrab'
-import ShipList from './assets/fleetyard'
+import axios from 'axios'
 
 // const ShipData = val => {
 //     if(val === 1){
@@ -21,10 +21,6 @@ import ShipList from './assets/fleetyard'
 
 let fleetDis = () => {
     
-    state = {
-        displayTog: 0
-    }
-
     shipDisplayToggle1 = () =>{
         this.setState({
             displayTog: 1
@@ -35,8 +31,9 @@ let fleetDis = () => {
                 {
                 ShipList.forEach(element => {
                     console.log('This is: ' + element.name)
-                    return (<div className='shipCard'>
-                        <h4>{element.name}</h4>
+                    return (
+                        <div className='shipCard'>
+                            <h4>{element.name}</h4>
                         </div>
                     )
                 })
@@ -53,7 +50,6 @@ let fleetDis = () => {
 
     render()
     {
-        let disTog = this.state.displayTog
         return (
             <main>
                 <div>
