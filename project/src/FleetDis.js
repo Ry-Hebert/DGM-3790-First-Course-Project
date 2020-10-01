@@ -2,24 +2,24 @@ import React, { Component } from 'react'
 import FleetGrab from './FleetGrab'
 import ShipList from './assets/fleetyard'
 
-const ShipData = val => {
-    if(val === 1){
-        return (
-            ShipList.forEach(element => {
-                return(
-                <div className='shipCard'>
-                    <h4>{element.name}</h4>
-                </div>
-                )
-            })
-        )
-    }
-    else {
-        return (<div></div>)
-    }
-}
+// const ShipData = val => {
+//     if(val === 1){
+//         return (
+//             ShipList.forEach(element => {
+//                 return(
+//                 <div className='shipCard'>
+//                     <h4>{element.name}</h4>
+//                 </div>
+//                 )
+//             })
+//         )
+//     }
+//     else {
+//         return (<div></div>)
+//     }
+// }
 
-class fleetDis extends Component {
+let fleetDis = () => {
     
     state = {
         displayTog: 0
@@ -51,7 +51,8 @@ class fleetDis extends Component {
         console.log(this.state.displayTog)
     }
 
-    render(){
+    render()
+    {
         let disTog = this.state.displayTog
         return (
             <main>

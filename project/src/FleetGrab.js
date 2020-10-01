@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import ShipList from './assets/fleetyard'
+import axios from 'axios'
 import FleetDis from './FleetDis'
 
 const ShipData = val => {
